@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" /> -->
+    <link rel="stylesheet" href="static/css/styles.css" type="text/css" />
+    <link rel="meta" href="labels.xml" type="application/rdf+xml" title="ICRA labels" />
+    <meta name="viewport" content="width=480px, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="true" />
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-68135516-1"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68135516-1');
+    </script>
+    <title>
+        Maze Generator
+    </title>
+    
+</head>
+
+<body>
+    <div class="aspNetHidden">
+    </div>
+    <h1 id="ControlBoxHeader">Maze Generator</h1>
+    <div>
+        <div class="ControlBox">
+            <!-- <div class="ShapeSection">
+                <label for="ShapeDropDownList" id="ShapeLabel">Shape:</label>
+                <select name="ShapeDropDownList"
+                    onchange="shapeChange(value)"
+                    id="ShapeDropDownList">
+                    <option selected value="1">Rectangular</option>
+                    <option value="2">Circular</option>
+                    <option value="3">Triangular</option>
+                    <option value="4">Hexagonal</option>
+
+                </select>
+            </div> -->
+            <input type="hidden" value="4" id="ShapeDropDownList">
+            <table class="Settings" name="Hexagonal">
+                <tr>
+                    <td class="SettingLabel">
+                        <label for="S4TesselationDropDownList" id="S4StyleLabel">Style:</label>
+                    </td>
+                    <td class="SettingValue">
+                        <select name="S4TesselationDropDownList" id="S4TesselationDropDownList">
+                            <option selected="selected" value="2">Sigma (Hexagonal cells)</option>
+                            <option value="3">Delta (Triangular cells)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="SettingLabel">
+                        <label for="S4SideLengthTextBox" id="S4SideLengthLabel">Side length:</label>
+                    </td>
+                    <td class="SettingValue">
+                        <input name="S4SideLengthTextBox" type="text" value="10" maxlength="5" id="S4SideLengthTextBox" style="width:40px;">
+                        (2 to 120 cells)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="SettingLabel">
+                        <label for="S4InnerSideLengthTextBox" id="S4InnerSideLengthLabel">Inner side length:</label>
+                    </td>
+                    <td class="SettingValue">
+                        <input name="S4InnerSideLengthTextBox" type="text" value="5" maxlength="5" id="S4InnerSideLengthTextBox" style="width:40px;">
+                        (0 or less than side length cells)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="SettingLabel">
+                        <label for="S4PathWidthTextBox" id="S2PathWidthLabel">Path Width:</label>
+                    </td>
+                    <td class="SettingValue">
+                        <input name="S4PathWidthTextBox" type="text" value="15" maxlength="5"
+                            id="S4PathWidthTextBox" style="width:40px;" />
+                        (3 to outer diameter - 2 cells)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="SettingLabel">
+                        <label for="S4WallWidthTextBox" id="S2WallWidthLabel">Wall Width:</label>
+                    </td>
+                    <td class="SettingValue">
+                        <input name="S4WallWidthTextBox" type="text" value="1" maxlength="5"
+                            id="S4WallWidthTextBox" style="width:40px;" />
+                        (3 to outer diameter - 2 cells)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="SettingLabel">
+                        <label for="S4OuterWidthTextBox" id="S2OuterWidthLabel">Outer Width:</label>
+                    </td>
+                    <td class="SettingValue">
+                        <input name="S4OuterWidthTextBox" type="text" value="3" maxlength="5"
+                            id="S4OuterWidthTextBox" style="width:40px;" />
+                        (3 to outer diameter - 2 cells)
+                    </td>
+                </tr>  
+            </table>
+
+        </div>
+
+        <div id="MazeDetails" style="text-align: center;" class="ControlBox">
+            <input id="solved" type="checkbox" name="ShowSolutionCheckBox" checked="checked"
+                onclick="" />
+            <label for="ShowSolutionCheckBox">Solution</label>
+            <input id= "generate" type="button" value="Generate Maze" onclick="generateshape()"/>
+        </div>          
+    </div>
+    <svg id="maze_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000"
+        height="1000">
+    </svg>
+    
+    <script src="./static/Controller/const.js"></script>
+    <script src="./static/Models/svg_download.js"></script>
+    <script src="./static/Models/circle_cell.js"></script>
+    <script src="./static/Models/triangular_cell.js"></script>
+    <script src="./static/Models/hexagonal_cell.js"></script>
+    <script src="./static/Models/rectangular_cell.js"></script>
+    <script src="./static/Controller/maze_generate_algorithm.js"></script>
+    <script src="./static/Controller/ui_controller.js"></script>
+
+    
+</body>
+
+</html>

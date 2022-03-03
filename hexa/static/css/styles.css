@@ -1,0 +1,37 @@
+
+body {color: black; background-color: white; background-image: none; font-family: arial, helvetica, sans-serif; font-size: 90%;}
+
+a:visited {color:blue; text-decoration: none;}
+a:hover {color:blue; text-decoration: underline;}
+a:link {color:blue; text-decoration: none;}
+
+h1, h2, address {text-align: left;}
+h1 {font-size: x-large;}
+h2 {font-size: large;}
+address {font-style: normal; font-size: x-small;}
+img {border-style: none;}
+
+h1#ControlBoxHeader {text-align: center;}
+div.ControlBox {margin: 0 auto 5px auto; width: 400px; background-color: #f0f0f0; padding: 10px;}
+div.ShapeSection {padding-top: 6px; padding-bottom: 6px; height: 20px; text-align: center;}
+div.AdvancedControlBox {margin: 0 auto 5px auto; width: 600px; background-color: #f0f0f0; padding: 10px;}
+p#Introduction {margin-top: 0;}
+table.Settings {border-collapse: collapse; border: 0;}
+td.SettingLabel {padding: 2px 2px 2px 0;}
+td.SettingValue {padding: 2px;}
+div.SettingSection {clear: both; margin: 0; padding: 0;}
+div.AdvancedSection {clear: both; float: left; margin: 0; padding: 2px 2px 2px 0;}
+div.LikeSection {clear: both; float: left; margin: 0;  padding: 6px 0 6px 0;}
+div.ButtonSection {float: right; margin: 0; padding: 0 0 6px 2px;}
+div.LinkSection1 {clear: both; height: 20px;}
+div.LinkSection2 {height: 20px;}
+div.LeftSection {float: left; margin: 0; padding: 0;}
+div.RightSection {float: right; margin: 0; padding: 0;}
+h2#MazeHeader, h2#NewsHeader {margin-top: 0; margin-bottom: 2px; text-align: center;}
+img#MazeDisplay {display: block; margin: 10px auto;}
+address#MazeDisplayFooter {text-align: center;}
+table.Prices {border-collapse: collapse; border: 1px solid grey;}
+th.Prices {padding: 4px; border: 1px solid grey; background-color: grey; color: white; text-align: left;}
+td.Prices {padding: 4px; border: 1px solid grey; text-align: right;}
+td.Articles {padding: 4px; border: 1px solid grey; text-align: left;}
+p.Bold {font-weight: bold;}
